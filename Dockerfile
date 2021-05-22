@@ -8,8 +8,8 @@ RUN go get -u github.com/gorilla/mux
 
 RUN go get github.com/githubnemo/CompileDaemon
 
-RUN CompileDaemon 
-
 RUN ls
 
 EXPOSE 3000
+
+RUN CompileDaemon -command="./backend"
