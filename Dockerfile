@@ -1,8 +1,8 @@
 FROM golang:1.15
 
-WORKDIR /go/src/
+WORKDIR /go/src/integertoroman/backend
 
-COPY [".", "/go/src/"]
+COPY [".", "/go/src/integertoroman"]
 
 RUN go get -u github.com/gorilla/mux
 
