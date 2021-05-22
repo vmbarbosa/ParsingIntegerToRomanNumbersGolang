@@ -10,6 +10,10 @@ RUN go get github.com/githubnemo/CompileDaemon
 
 RUN cd backend/
 
-RUN CompileDaemon -command="./backend"
+RUN ls
+
+RUN CompileDaemon 
+
+RUN ls
 
 EXPOSE 3000
