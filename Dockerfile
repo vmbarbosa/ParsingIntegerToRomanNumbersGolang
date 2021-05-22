@@ -2,7 +2,7 @@ FROM golang:1.15
 
 WORKDIR /usr/src
 
-COPY [".", "/usr/src/"]
+COPY [".", "/go/src/"]
 
 RUN go get -u github.com/gorilla/mux
 
