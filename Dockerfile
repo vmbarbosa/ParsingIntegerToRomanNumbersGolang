@@ -12,6 +12,8 @@ RUN cd backend/
 
 RUN ls
 
+RUN cd backend/
+
 RUN CompileDaemon 
 
 RUN ls
