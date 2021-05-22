@@ -1,6 +1,6 @@
 FROM golang:1.15
 
-WORKDIR /usr/src
+WORKDIR /go/src/
 
 COPY [".", "/go/src/"]
 
