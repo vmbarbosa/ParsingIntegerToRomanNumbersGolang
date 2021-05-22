@@ -8,16 +8,14 @@ RUN go get -u github.com/gorilla/mux
 
 RUN go get github.com/githubnemo/CompileDaemon
 
-RUN ls
-
-RUN cd backend/
+RUN pwd
 
 RUN ls
 
 RUN cd backend/
+
+RUN ls
 
 RUN CompileDaemon 
-
-RUN ls
 
 EXPOSE 3000
