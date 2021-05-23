@@ -25,10 +25,10 @@ jobs:
           go get -u github.com/gorilla/mux
 
     - name: Move Go files and DockerFile
-        run: |
-          mkdir Files
-          mv backend Files
-          cp Dockerfile Files
+      run: |
+        mkdir Files
+        mv backend Files
+        cp Dockerfile Files
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3

@@ -12,10 +12,12 @@ func main() {
 }
 
 func Router() {
+
 	router := mux.NewRouter().StrictSlash(true)
 
 	router.HandleFunc("/", indexRoute)
 	router.HandleFunc("/api/conversor/{id}", conversor).Methods("GET")
 
 	http.ListenAndServe(":3000", router)
+
 }
