@@ -12,4 +12,4 @@ RUN ls
 
 EXPOSE 3000
 
-CMD ["CompileDaemon","-command=\"./backend\""]
+CMD ["CompileDaemon","-command=./backend"]
