@@ -69,7 +69,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        file: Files/Dockerfile
+        file: Dockerfile
         push: true
         tags: ${{ secrets.USER_DH }}/golang:pruebatecnica-${{ github.actor }}-dev
 
