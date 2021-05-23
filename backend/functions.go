@@ -16,7 +16,7 @@ func conversor(w http.ResponseWriter, r *http.Request) {
 	number, err := strconv.Atoi(identifier["id"])
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	if err != nil || number > 3000 || number < 1 {
+	if err != nil || number >= 3000 || number < 1 {
 		log.Println("Numero Invalido")
 		fmt.Fprintf(w, "Numero Invalido")
 		return
@@ -49,5 +49,5 @@ func conversor(w http.ResponseWriter, r *http.Request) {
 func indexRoute(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Bienvenido al conversor de Numeros Enteros a Romanos\n\n\nPara poder convertir un numero Entero a Romano se debe acceder mediante una ruta de una API\nLa siguiente ruta es un metodo GET que solo acepta numeros enteros mayores a 0 y menores o iguales a 3000:\n\n/api/conversor/{id}")
+	fmt.Fprintf(w, "Bienvenido al conversor de Numeros Enteros a Romanos\n\n\nPara poder convertir un numero Entero a Romano se debe acceder mediante una ruta de una API\nLa siguiente ruta es un metodo GET que solo acepta numeros enteros mayores a 0 y menores o iguales a 3000:\n\n/api/conversor/{number}")
 }

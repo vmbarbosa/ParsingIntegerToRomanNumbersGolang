@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: int-to-roman-pod
+  labels:
+    component: api
+spec:
+  containers:
+    - name: integer-to-roman
+      image: vmbarbosa/golang:pruebatecnica-vmbarbosa-dev
+      imagePullPolicy: "Always"
+      ports:
+        - containerPort: 3000
