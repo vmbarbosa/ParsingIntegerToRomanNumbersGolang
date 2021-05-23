@@ -33,6 +33,7 @@ jobs:
     - name: Validate coverage Unit Test
       run: |
           ls
+          cd Files
           for i in $(ls -C1)
           do
             echo [ -------------- Unit Test $i ---------------- ]
