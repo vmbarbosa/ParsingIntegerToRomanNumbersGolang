@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  build:
+  CI:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -28,8 +28,7 @@ jobs:
     - name: Login to docker hub
       uses: docker/login-action@v1
       with:
-        registry: ghcr.io
-        username: ${{ github.repository_owner }}
+        username: ${{ secrets.USER_DH }}
         password: ${{ secrets.PASSWORD_DH }}  
 
     - name: Build and push
