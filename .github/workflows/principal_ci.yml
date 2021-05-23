@@ -36,4 +36,5 @@ jobs:
       with:
         file: Dockerfile
         push: true
+        tags: ${{ secrets.USER_DH }}/golang:pruebatecnica
 
