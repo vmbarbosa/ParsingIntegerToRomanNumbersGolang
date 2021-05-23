@@ -36,7 +36,6 @@ jobs:
           for i in $(ls -C1)
           do
             echo [ -------------- Unit Test $i ---------------- ]
-            go test -v ./...
             go test -coverprofile cover.out
             go tool cover -func=cover.out
             CoverageFile=$(go tool cover -func=cover.out)
