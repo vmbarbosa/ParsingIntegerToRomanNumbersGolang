@@ -12,4 +12,4 @@ RUN ls
 
 EXPOSE 3000
 
-CMD ["go","run","./..."]
+CMD ["CompileDaemon","-command=\"./backend\""]
