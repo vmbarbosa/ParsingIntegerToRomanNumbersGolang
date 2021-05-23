@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: integer-to-roman-pod
+  name: int-to-roman-pod
   labels:
     component: api
 spec:

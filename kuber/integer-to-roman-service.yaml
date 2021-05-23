@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: integer-to-roman--load-balancer-service
+  name: int-to-roman-load-balancer
 spec:
   type: LoadBalancer
   ports:
