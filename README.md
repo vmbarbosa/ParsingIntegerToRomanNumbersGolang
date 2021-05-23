@@ -35,7 +35,7 @@ Crear una API que permite convertir numeros enteros a romanos. Esta API debe cor
 
 * [x] Usar Minikube
 
-* [ ] Automatizar pruebas unitarias de Golang
+* [x] Automatizar pruebas unitarias de Golang
 
 * [x] Automatizar despliegue de Dockerfile
 

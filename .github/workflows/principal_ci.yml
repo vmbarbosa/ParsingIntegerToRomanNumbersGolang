@@ -26,7 +26,6 @@ jobs:
 
     - name: Validate coverage Unit Test
       run: |
-          ls
           cd backend/
           echo [ -------------- Unit Test $i ---------------- ]
           go test -coverprofile cover.out
