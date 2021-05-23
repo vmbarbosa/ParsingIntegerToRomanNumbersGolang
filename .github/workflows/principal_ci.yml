@@ -29,6 +29,26 @@ jobs:
         mkdir Files
         mv backend Files
         cp Dockerfile Files
+    
+    - name: Validate coverage Unit Test
+      run: |
+          ls
+          for i in $(ls -C1)
+          do
+            echo [ -------------- Unit Test $i ---------------- ]
+            go test -v ./...
+            go test -coverprofile cover.out
+            go tool cover -func=cover.out
+            CoverageFile=$(go tool cover -func=cover.out)
+            CoverageFile=(${CoverageFile//%/ })
+            CoverageFile=${CoverageFile[${#CoverageFile[@]}-1]}
+            if [[ ${CoverageFile%%.*} -ge 75 ]];then
+                echo -e "Successful Unit test \n"
+            else
+                echo -e "Unsuccessful Unit test \n"
+                exit 1
+            fi
+          done
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
