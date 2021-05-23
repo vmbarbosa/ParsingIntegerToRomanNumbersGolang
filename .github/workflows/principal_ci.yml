@@ -66,5 +66,5 @@ jobs:
       with:
         file: Files/Dockerfile
         push: true
-        tags: ${{ secrets.USER_DH }}/golang:pruebatecnica-{{ github.actor }}-dev
+        tags: ${{ secrets.USER_DH }}/golang:pruebatecnica-${{ github.actor }}-dev
 
